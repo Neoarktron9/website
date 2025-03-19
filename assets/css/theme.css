@@ -1,0 +1,294 @@
+/* Theme CSS - Light and Dark Mode Variables */
+:root {
+    /* Light Theme Variables (Default) */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-tertiary: #e9ecef;
+    --text-primary: #212529;
+    --text-secondary: #495057;
+    --text-muted: #6c757d;
+    --accent-color: #ff6b6b;
+    --accent-color-hover: #ff5252;
+    --border-color: #dee2e6;
+    --card-bg: #ffffff;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --header-bg: rgba(255, 255, 255, 0.95);
+    --footer-bg: #f8f9fa;
+    --input-bg: #ffffff;
+    --input-border: #ced4da;
+    --modal-bg: #ffffff;
+    --modal-overlay: rgba(0, 0, 0, 0.5);
+    --scroll-indicator-bg: #ff6b6b;
+    --back-to-top-bg: #ff6b6b;
+    --back-to-top-color: #ffffff;
+    --theme-transition: all 0.3s ease;
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-tertiary: #2d2d2d;
+    --text-primary: #f8f9fa;
+    --text-secondary: #e9ecef;
+    --text-muted: #adb5bd;
+    --accent-color: #ff6b6b;
+    --accent-color-hover: #ff5252;
+    --border-color: #343a40;
+    --card-bg: #1e1e1e;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --header-bg: rgba(18, 18, 18, 0.95);
+    --footer-bg: #1e1e1e;
+    --input-bg: #2d2d2d;
+    --input-border: #495057;
+    --modal-bg: #1e1e1e;
+    --modal-overlay: rgba(0, 0, 0, 0.7);
+    --scroll-indicator-bg: #ff6b6b;
+    --back-to-top-bg: #ff6b6b;
+    --back-to-top-color: #ffffff;
+}
+
+/* Apply Theme Variables to Elements */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: var(--theme-transition);
+}
+
+.header {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--theme-transition);
+}
+
+.logo-text {
+    color: var(--text-primary);
+    transition: var(--theme-transition);
+}
+
+.nav-link {
+    color: var(--text-primary);
+    transition: var(--theme-transition);
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+}
+
+.search-input {
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--text-primary);
+    transition: var(--theme-transition);
+}
+
+.search-input::placeholder {
+    color: var(--text-muted);
+}
+
+.search-btn {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    transition: var(--theme-transition);
+}
+
+.search-btn:hover {
+    background-color: var(--accent-color-hover);
+}
+
+.theme-toggle {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    transition: var(--theme-transition);
+}
+
+.theme-toggle:hover {
+    color: var(--accent-color);
+}
+
+.section {
+    background-color: var(--bg-primary);
+    transition: var(--theme-transition);
+}
+
+.section-title {
+    color: var(--text-primary);
+    transition: var(--theme-transition);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #ffffff;
+    transition: var(--theme-transition);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color-hover);
+    border-color: var(--accent-color-hover);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    transition: var(--theme-transition);
+}
+
+.btn-outline:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+.video-item {
+    background-color: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    transition: var(--theme-transition);
+}
+
+.video-title {
+    color: var(--text-primary);
+    transition: var(--theme-transition);
+}
+
+.video-description {
+    color: var(--text-secondary);
+    transition: var(--theme-transition);
+}
+
+.video-meta {
+    color: var(--text-muted);
+    transition: var(--theme-transition);
+}
+
+.filter-btn {
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    transition: var(--theme-transition);
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #ffffff;
+}
+
+.about-section {
+    background-color: var(--bg-secondary);
+    transition: var(--theme-transition);
+}
+
+.about-title {
+    color: var(--text-primary);
+    transition: var(--theme-transition);
+}
+
+.about-text {
+    color: var(--text-secondary);
+    transition: var(--theme-transition);
+}
+
+.social-link {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    transition: var(--theme-transition);
+}
+
+.social-link:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+.footer {
+    background-color: var(--footer-bg);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    transition: var(--theme-transition);
+}
+
+.footer-title {
+    color: var(--text-primary);
+    transition: var(--theme-transition);
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    transition: var(--theme-transition);
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    transition: var(--theme-transition);
+}
+
+.back-to-top {
+    background-color: var(--back-to-top-bg);
+    color: var(--back-to-top-color);
+    transition: var(--theme-transition);
+}
+
+.modal {
+    background-color: var(--modal-overlay);
+    transition: var(--theme-transition);
+}
+
+.modal-content {
+    background-color: var(--modal-bg);
+    box-shadow: var(--card-shadow);
+    transition: var(--theme-transition);
+}
+
+.modal-close {
+    color: var(--text-primary);
+    transition: var(--theme-transition);
+}
+
+.modal-close:hover {
+    color: var(--accent-color);
+}
+
+.scroll-indicator {
+    background-color: var(--scroll-indicator-bg);
+    transition: var(--theme-transition);
+}
+
+/* Theme Toggle Icon Animation */
+.theme-toggle .fa-sun {
+    display: inline-block;
+}
+
+.theme-toggle .fa-moon {
+    display: none;
+}
+
+[data-theme="dark"] .theme-toggle .fa-sun {
+    display: none;
+}
+
+[data-theme="dark"] .theme-toggle .fa-moon {
+    display: inline-block;
+}
+
+/* Theme toggle animation */
+.theme-toggle-animation {
+    animation: rotate 0.5s ease;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

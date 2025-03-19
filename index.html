@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      /* Force Dark Mode - Immediate Application */
+      body {
+        background-color: #121212 !important;
+        color: #f8f9fa !important;
+      }
+      
+      .header {
+        background-color: rgba(18, 18, 18, 0.95) !important;
+        border-bottom: 1px solid #343a40 !important;
+      }
+      
+      .logo-text, .nav-link, .section-title, .video-title, .about-title, .footer-title, h1, h2, h3, h4, h5, h6 {
+        color: #f8f9fa !important;
+      }
+      
+      .nav-link:hover, .footer-links a:hover {
+        color: #ff6b6b !important;
+      }
+      
+      .search-input, textarea, input {
+        background-color: #2d2d2d !important;
+        border: 1px solid #495057 !important;
+        color: #f8f9fa !important;
+      }
+      
+      .search-input::placeholder {
+        color: #adb5bd !important;
+      }
+      
+      .video-description, .about-text, p {
+        color: #e9ecef !important;
+      }
+      
+      .video-meta, .footer-bottom {
+        color: #adb5bd !important;
+      }
+      
+      .video-item, .card, .modal-content {
+        background-color: #1e1e1e !important;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+      }
+      
+      .footer {
+        background-color: #1e1e1e !important;
+        border-top: 1px solid #343a40 !important;
+        color: #e9ecef !important;
+      }
+      
+      .footer-links a {
+        color: #e9ecef !important;
+      }
+      
+      .filter-btn, button {
+        background-color: #2d2d2d !important;
+        border: 1px solid #343a40 !important;
+        color: #f8f9fa !important;
+      }
+      
+      .filter-btn:hover, .filter-btn.active, .btn-primary {
+        background-color: #ff6b6b !important;
+        border-color: #ff6b6b !important;
+        color: #ffffff !important;
+      }
+      
+      .about-section, .section {
+        background-color: #1e1e1e !important;
+      }
+      
+      .social-link {
+        background-color: #2d2d2d !important;
+        color: #f8f9fa !important;
+      }
+      
+      .social-link:hover {
+        background-color: #ff6b6b !important;
+        color: #ffffff !important;
+      }
+      
+      /* Hide theme toggle button */
+      .theme-toggle {
+        display: none !important;
+      }
+    </style>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rose Being Unhinged - A collection of the most entertaining and unhinged moments">
+    <meta name="keywords" content="Rose, unhinged, videos, funny, entertainment">
+    <meta name="author" content="Rose Fan Page">
+    <title>Rose Being Unhinged | Entertaining Moments Collection</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Permanent+Marker&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/interactive.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+    
+    <!-- Particle Background -->
+    <div class="particles-container"></div>
+    
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator"></div>
+    
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <span class="logo-text">Rose Unhinged</span>
+            </div>
+            
+            <nav class="nav">
+                <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#video-gallery" class="nav-link">Videos</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search videos...">
+                    <button class="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+<section class="hero" id="hero" style="background-color: #121212 !important;">
+    <div class="container">
+        <div class="hero-title-container animate-on-scroll">
+            <h1 id="animated-title" class="hero-title" style="color: #a78bfa !important; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;">Rose Being Unhinged</h1>
+            <p class="hero-subtitle" style="color: #ff6b6b !important; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;">A collection of the most entertaining and unhinged moments that will make your day brighter.</p>
+            <!-- Rest of the hero section -->
+        </div>
+    </div>
+</section>
+            
+                <div class="hero-cta">
+                    <a href="#video-gallery" class="btn btn-primary">Explore Videos</a>
+                    <a href="#about" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="featured-video animate-on-scroll">
+                <div class="featured-video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/5nmak-eCDNE?rel=0" title="Featured Rose Being Unhinged Video" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Gallery Section -->
+    <section class="section video-gallery" id="video-gallery">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Video Collection</h2>
+            
+            <div class="gallery-filters animate-on-scroll">
+                <button class="filter-btn active" data-filter="all">All Videos</button>
+                <button class="filter-btn" data-filter="funny">Funny</button>
+                <button class="filter-btn" data-filter="reactions">Reactions</button>
+                <button class="filter-btn" data-filter="moments">Best Moments</button>
+            </div>
+            
+            <div class="videos-grid">
+                <div class="video-item animate-on-scroll" data-category="funny" data-video-id="5nmak-eCDNE">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/5nmak-eCDNE?rel=0" title="Rose Being Unhinged Video 1" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Hilarious Moments Compilation</h3>
+                        <p class="video-description">A collection of the funniest and most unhinged moments from Rose.</p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-calendar"></i> Jan 15, 2025</span>
+                            <span><i class="fas fa-eye"></i> 1.2M views</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-item animate-on-scroll" data-category="reactions" data-video-id="cXBsDpN0pDw">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/cXBsDpN0pDw?rel=0" title="Rose Being Unhinged Video 2" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Unexpected Reactions</h3>
+                        <p class="video-description">Rose's most unexpected and hilarious reactions to various situations.</p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-calendar"></i> Feb 3, 2025</span>
+                            <span><i class="fas fa-eye"></i> 890K views</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-item animate-on-scroll" data-category="moments" data-video-id="H-_onmihdrM">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/H-_onmihdrM?rel=0" title="Rose Being Unhinged Video 3" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Iconic Moments</h3>
+                        <p class="video-description">The most iconic and memorable moments that define Rose's unhinged energy.</p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-calendar"></i> Feb 20, 2025</span>
+                            <span><i class="fas fa-eye"></i> 1.5M views</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-item animate-on-scroll" data-category="funny" data-video-id="cpTqU_4don4">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/cpTqU_4don4?rel=0" title="Rose Being Unhinged Video 4" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Laugh Out Loud Moments</h3>
+                        <p class="video-description">A compilation of moments that will make you laugh out loud.</p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-calendar"></i> Mar 5, 2025</span>
+                            <span><i class="fas fa-eye"></i> 750K views</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-item animate-on-scroll" data-category="reactions" data-video-id="GqCK-JPyftM">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/GqCK-JPyftM?rel=0" title="Rose Being Unhinged Video 5" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Priceless Reactions</h3>
+                        <p class="video-description">Rose's priceless reactions that have become internet sensations.</p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-calendar"></i> Mar 12, 2025</span>
+                            <span><i class="fas fa-eye"></i> 980K views</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-item animate-on-scroll" data-category="moments" data-video-id="M_KR8tqPA2s">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/M_KR8tqPA2s?rel=0" title="Rose Being Unhinged Video 6" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Unforgettable Moments</h3>
+                        <p class="video-description">The most unforgettable and unhinged moments from Rose's videos.</p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-calendar"></i> Mar 17, 2025</span>
+                            <span><i class="fas fa-eye"></i> 620K views</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-image animate-on-scroll slide-right">
+                    <img src="https://via.placeholder.com/600x400?text=Rose" alt="Rose" class="glitch-image">
+                </div>
+                <div class="about-content animate-on-scroll slide-left">
+                    <h2 class="about-title">About Rose</h2>
+                    <p class="about-text">Rose is known for her unique personality and unhinged moments that have captured the hearts of millions online. Her authentic reactions, hilarious comments, and unexpected behaviors have made her an internet sensation.</p>
+                    <p class="about-text">This fan page is dedicated to collecting and showcasing the most entertaining moments from Rose's videos, celebrating the joy and laughter she brings to her audience.</p>
+                    <p class="about-text">Join our community of fans who appreciate Rose's unfiltered and genuine approach to content creation.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link tooltip" data-tooltip="Follow on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link tooltip" data-tooltip="Follow on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link tooltip" data-tooltip="Subscribe on YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link tooltip" data-tooltip="Join Discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Get In Touch</h2>
+            <p class="text-center mb-lg animate-on-scroll">Have suggestions for videos or want to collaborate? Reach out to us!</p>
+            
+            <div class="about-container">
+                <div class="about-content animate-on-scroll">
+                    <h3 class="mb-md">Contact Information</h3>
+                    <p class="mb-md"><i class="fas fa-envelope"></i> contact@roseunhinged.com</p>
+                    <p class="mb-md"><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</p>
+                    <p class="mb-lg"><i class="fas fa-globe"></i> www.roseunhinged.com</p>
+                    
+                    <h3 class="mb-md">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="about-content animate-on-scroll">
+                    <h3 class="mb-md">Send a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group mb-md">
+                            <input type="text" placeholder="Your Name" required class="search-input">
+                        </div>
+                        <div class="form-group mb-md">
+                            <input type="email" placeholder="Your Email" required class="search-input">
+                        </div>
+                        <div class="form-group mb-md">
+                            <input type="text" placeholder="Subject" required class="search-input">
+                        </div>
+                        <div class="form-group mb-md">
+                            <textarea placeholder="Your Message" required class="search-input" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4 class="footer-title">Rose Unhinged</h4>
+                    <p>A fan-made collection of the most entertaining and unhinged moments from Rose's videos.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#hero">Home</a></li>
+                        <li class="footer-link"><a href="#video-gallery">Videos</a></li>
+                        <li class="footer-link"><a href="#about">About</a></li>
+                        <li class="footer-link"><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Categories</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#video-gallery">Funny Moments</a></li>
+                        <li class="footer-link"><a href="#video-gallery">Reactions</a></li>
+                        <li class="footer-link"><a href="#video-gallery">Best Moments</a></li>
+                        <li class="footer-link"><a href="#video-gallery">Compilations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p>Subscribe to get updates on new videos and content.</p>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" class="search-input">
+                        <button class="btn btn-primary mt-md">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rose Unhinged Fan Page. All rights reserved. This is a fan-made website and is not affiliated with Rose.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <!-- Video Modal -->
+    <div class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-video-wrapper"></div>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/gallery.js"></script>
+    <script src="assets/js/responsive.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <!-- Video Modal -->
+<div id="video-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <iframe id="modal-video" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script>
+// Get modal elements
+const modal = document.getElementById('video-modal');
+const modalVideo = document.getElementById('modal-video');
+const closeModal = document.querySelector('.close-modal');
+
+// Open modal when video-item is clicked
+document.querySelectorAll('.video-item').forEach(item => {
+    item.addEventListener('click', () => {
+        const videoId = item.getAttribute('data-video-id');
+        modal.style.display = 'block';
+        modalVideo.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    });
+});
+
+// Close modal and stop video playback
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+    modalVideo.src = '';
+});
+
+// Close modal when clicking outside content
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+        modalVideo.src = '';
+    }
+});
+</script>
+
+<style>
+/* Video Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    max-width: 800px;
+}
+
+.modal-content iframe {
+    width: 100%;
+    height: 450px;
+    display: block;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px; right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #ff6b6b;
+}
+</style>
+
+</body>
+</html>

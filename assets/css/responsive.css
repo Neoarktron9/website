@@ -1,0 +1,510 @@
+/* Responsive styles for Rose Being Unhinged */
+
+/* Base responsive variables */
+:root {
+  --mobile-breakpoint: 576px;
+  --tablet-breakpoint: 768px;
+  --desktop-breakpoint: 992px;
+  --large-desktop-breakpoint: 1200px;
+}
+
+/* Mobile First Approach - Default styles are for mobile */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  html {
+    font-size: 65%; /* Slightly larger base font size */
+  }
+  
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .videos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .hero-title {
+    font-size: 5rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-lg);
+  }
+  
+  .hero-title {
+    font-size: 5.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 2.2rem;
+  }
+  
+  .videos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  .about-container {
+    flex-direction: row;
+  }
+  
+  .footer-container {
+    flex-direction: row;
+  }
+  
+  .nav-toggle {
+    display: none;
+  }
+  
+  .nav-list {
+    display: flex;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-xl);
+  }
+  
+  .hero-title {
+    font-size: 6rem;
+  }
+  
+  .videos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+  
+  .featured-video {
+    max-width: 900px;
+  }
+  
+  .modal-content {
+    width: 80%;
+    max-width: 1000px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  html {
+    font-size: 80%;
+  }
+  
+  .container {
+    max-width: 1400px;
+  }
+  
+  .hero-title {
+    font-size: 7rem;
+  }
+  
+  .videos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
+  }
+}
+
+/* Mobile specific styles (max-width approaches) */
+@media (max-width: 767px) {
+  /* Mobile navigation */
+  .nav-list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--dark-bg);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 80px;
+    transition: right 0.3s ease;
+    z-index: 90;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav-list.active {
+    right: 0;
+  }
+  
+  .nav-item {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding: var(--spacing-md) 0;
+  }
+  
+  .nav-toggle {
+    display: block;
+    z-index: 100;
+    font-size: 2.4rem;
+    margin-left: auto;
+  }
+  
+  .nav-toggle.active {
+    position: fixed;
+    right: 20px;
+  }
+  
+  .search-container {
+    margin: var(--spacing-lg) auto;
+    width: 80%;
+  }
+  
+  .theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 70px;
+  }
+  
+  /* Mobile layout adjustments */
+  .hero {
+    padding-top: 8rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .about-container {
+    flex-direction: column;
+  }
+  
+  .about-image {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .footer-container {
+    flex-direction: column;
+  }
+  
+  .footer-col {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  /* Mobile video gallery */
+  .gallery-filters {
+    overflow-x: auto;
+    padding-bottom: var(--spacing-sm);
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .filter-btn {
+    flex-shrink: 0;
+  }
+  
+  /* Mobile form */
+  .form-group {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  /* Mobile modal */
+  .modal-content {
+    width: 95%;
+  }
+}
+
+/* Touch-friendly adjustments */
+@media (hover: none) {
+  /* Increase tap target sizes */
+  .btn, .nav-link, .filter-btn, .social-link, .back-to-top {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+  
+  /* Remove hover effects that don't work well on touch devices */
+  .video-item:hover {
+    transform: none;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .btn:hover::before {
+    left: -100%;
+  }
+  
+  .nav-link:hover::after {
+    width: 0;
+  }
+  
+  /* Add active/touch states instead */
+  .video-item:active {
+    transform: scale(0.98);
+  }
+  
+  .btn:active {
+    transform: scale(0.95);
+  }
+  
+  /* Adjust animations for touch devices */
+  .title-letter:hover {
+    transform: none;
+    color: inherit;
+    text-shadow: none;
+  }
+  
+  /* Ensure touch feedback */
+  .filter-btn:active, .social-link:active, .nav-link:active {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: 12rem 0 4rem;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .hero-subtitle {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .featured-video {
+    max-width: 500px;
+  }
+  
+  .nav-list {
+    padding-top: 60px;
+  }
+  
+  .section {
+    padding: var(--spacing-lg) 0;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+  
+  .header, .footer, .hero-cta, .gallery-filters, .back-to-top, .modal, .particles-container {
+    display: none !important;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .video-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  
+  .video-wrapper {
+    display: none;
+  }
+  
+  .video-info {
+    padding: 1cm;
+    background: white;
+    color: black;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  .hero-title, .section-title {
+    color: black;
+    text-align: center;
+    margin: 1cm 0;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-color: #0000FF;
+    --secondary-color: #FF0000;
+    --accent-color: #00FF00;
+    --dark-bg: #000000;
+    --darker-bg: #000000;
+    --light-text: #FFFFFF;
+    --muted-text: #FFFFFF;
+  }
+  
+  body {
+    background: black;
+    color: white;
+  }
+  
+  .btn, .filter-btn, .nav-link, .social-link {
+    border: 2px solid white;
+  }
+  
+  .video-item, .featured-video, .about-image {
+    border: 2px solid white;
+    box-shadow: none;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001s !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .particle, .ripple, .burst-particle {
+    display: none;
+  }
+  
+  .title-letter {
+    animation: none !important;
+    transform: none !important;
+  }
+  
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .loading {
+    display: none;
+  }
+}
+
+/* Dark mode preference */
+@media (prefers-color-scheme: light) {
+  body:not(.dark-theme):not(.light-theme) {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+  }
+  
+  body:not(.dark-theme):not(.light-theme) .header {
+    background-color: rgba(245, 247, 250, 0.8);
+  }
+  
+  body:not(.dark-theme):not(.light-theme) .nav-link,
+  body:not(.dark-theme):not(.light-theme) .logo-text {
+    color: #333;
+  }
+  
+  body:not(.dark-theme):not(.light-theme) .card,
+  body:not(.dark-theme):not(.light-theme) .video-info {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+  }
+}
+
+/* Accessibility focus styles */
+:focus {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* Skip to content link for accessibility */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--secondary-color);
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Responsive typography */
+@media (max-width: 576px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+  
+  h2 {
+    font-size: 2.8rem;
+  }
+  
+  h3 {
+    font-size: 2.2rem;
+  }
+  
+  p {
+    font-size: 1.4rem;
+  }
+}
+
+/* Responsive spacing */
+@media (max-width: 576px) {
+  .section {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .mb-lg {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .mb-xl {
+    margin-bottom: var(--spacing-lg);
+  }
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive iframes */
+.video-wrapper iframe {
+  max-width: 100%;
+}
+
+/* Responsive form elements */
+input, textarea, select, button {
+  max-width: 100%;
+}
+
+/* Responsive tables */
+table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+/* Responsive utilities */
+.hide-on-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hide-on-mobile {
+    display: initial;
+  }
+  
+  .hide-on-desktop {
+    display: none;
+  }
+}
